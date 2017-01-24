@@ -7,6 +7,7 @@ use BadMethodCallException;
 use Illuminate\Support\Collection;
 use Illuminate\Support\HtmlString;
 use Illuminate\Contracts\View\Factory;
+use Illuminate\Session\Store as SessionStore;
 use Illuminate\Session\SessionInterface;
 use Illuminate\Support\Traits\Macroable;
 use Illuminate\Contracts\Routing\UrlGenerator;
@@ -1178,7 +1179,7 @@ class FormBuilder
      *
      * @return $this
      */
-    public function setSessionStore(SessionInterface $session)
+    public function setSessionStore(SessionStore $session)
     {
         $this->session = $session;
 
